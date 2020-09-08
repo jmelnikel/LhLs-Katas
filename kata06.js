@@ -3,20 +3,23 @@
 
 const whereCanIPark = function (spots, vehicle) {
   if (vehicle === "motorcycle") {
-    findSpot(spots, ["R", "S", "M"])
+    return findSpot(spots, ["R", "S", "M"])
   } else if (vehicle === "small") {
-    findSpot(spots, ["R", "S"])
+    return findSpot(spots, ["R", "S"])
   } else {
-    findSpot(spots, ["R"])
+    return findSpot(spots, ["R"])
   }
 };
 
 const findSpot = function (array, criteria) {
-  // console.log(array);
-  console.log(criteria);
   for (let lineIndex in array) {
-    console.log(array[lineIndex])
+    for (let spotIndex in array[lineIndex]) {
+      if (criteria.includes(array[lineIndex][spotIndex])) {
+        return [spotIndex, lineIndex]
+      } 
+    }
   }
+  return false
 }
 
 
@@ -33,3 +36,25 @@ console.log(whereCanIPark(
   ],
   'regular'
 ));
+
+console.log(whereCanIPark(
+  [
+    ['M', 'M', 'M', 'M'],
+    ['M', 's', 'M', 'M'],
+    ['M', 'M', 'M', 'M'],
+    ['M', 'M', 'r', 'M']
+  ],
+  'small'
+));
+
+console.log(whereCanIPark(
+  [
+    ['s', 's', 's', 's', 's', 's'],
+    ['s', 'm', 's', 'S', 'r', 's'],
+    ['s', 'm', 's', 'S', 'r', 's'],
+    ['S', 'r', 's', 'm', 'r', 's'],
+    ['S', 'r', 's', 'm', 'R', 's'],
+    ['S', 'r', 'S', 'M', 'm', 'S']
+  ],
+  'motorcycle'
+))
