@@ -17,12 +17,13 @@ const makeCase = function(input, stringCase) {
   if (stringCase === "title") {
     return titleCase(input)
   }
+  if (stringCase === "vowel") {
+    return vowelCase(input)
+  }
+  if (stringCase === "consonant") {
+    return consonantCase(input)
+  }
 }
-
-// This Is A String
-// thIs Is A strIng
-// THiS iS a STRiNG
-// THIS_IS_A_STRING
 
 console.log(makeCase("this is a string", "camel"));
 console.log(makeCase("this is a string", "pascal"));
@@ -31,6 +32,7 @@ console.log(makeCase("this is a string", "kebab"));
 console.log(makeCase("this is a string", "title"));
 console.log(makeCase("this is a string", "vowel"));
 console.log(makeCase("this is a string", "consonant"));
+
 
 function camelCase(input) {
   let arrayOfStrings = input.split(" ");
@@ -92,4 +94,16 @@ function titleCase(input) {
     outputArray.push(string)
   }
   return outputArray.join(" ")
+}
+
+function vowelCase(input) {
+  return input.replace(/[aeiou]/g, function(vowel) {
+    return vowel.toUpperCase();
+  });
+}
+
+function consonantCase(input) {
+  return input.replace(/[bcdfghjklmnpqrstvwxyz]/g, function(vowel) {
+    return vowel.toUpperCase();
+  });
 }
