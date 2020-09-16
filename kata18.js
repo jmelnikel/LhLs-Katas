@@ -3,16 +3,12 @@
 
 const squareCode = function(message) {
   message = message.split(" ").join("").split("")
-  let lineMaxLength = Math.ceil(Math.sqrt(message.length))
-  cutUpArray(message,lineMaxLength)
-  
+  let magicNumber = Math.ceil(Math.sqrt(message.length))
+  console.log(message)
+  console.log(magicNumber)
   
 
-  // console.log(message) // "chillout"
-  // console.log(lineMaxLength) // 3
 };
-
-
 
 
 // clu hlt io
@@ -22,15 +18,3 @@ console.log(squareCode("chill out"));
 // console.log(squareCode("feed the dog"));
 // console.log(squareCode("have a nice day"));
 // console.log(squareCode("if man was meant to stay on the ground god would have given us roots"));
-
-function cutUpArray(array, segmentLength) {
-  console.log(array)
-  console.log(segmentLength)
-  let output = [];
-  if (array.length >= segmentLength) {
-    let charsArray = array.splice(0, segmentLength)
-    output.push(charsArray)
-    cutUpArray(array, segmentLength)
-  }
-
-}
