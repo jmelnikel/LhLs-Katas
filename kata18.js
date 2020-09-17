@@ -4,11 +4,11 @@
 const squareCode = function(message) {
   message = message.split(" ").join("").split("")
   let magicNumber = Math.ceil(Math.sqrt(message.length))
-  console.log(message)
-  console.log(magicNumber)
   
+  console.log(createLetterBundle(message, magicNumber));
 
 };
+
 
 
 // clu hlt io
@@ -18,3 +18,23 @@ console.log(squareCode("chill out"));
 // console.log(squareCode("feed the dog"));
 // console.log(squareCode("have a nice day"));
 // console.log(squareCode("if man was meant to stay on the ground god would have given us roots"));
+
+
+function createLetterBundle(array, number) {
+  let letterBundle = [];
+  if (array.length < number) {
+    for (let letter of array) {
+      letterBundle.push(array.shift())
+    }
+  } else {
+    for (let i = 0; i < number; i++) {
+      letterBundle.push(array.shift())
+    }
+  }
+  console.log(array)
+  return letterBundle // [ "a", "b", "c" ]
+}
+
+function cutUpArray(array, number) {
+  
+}
