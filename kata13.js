@@ -1,4 +1,4 @@
-// Talking Calendar
+// Talking Calendar - Date Converter
 // Given a date as a string (not a Date object) formatted as YYYY/MM/DD. Create a function to produce a human readable date (December 2nd, 2017).
 
 const talkingCalendar = function(date) {

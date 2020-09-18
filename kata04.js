@@ -1,4 +1,4 @@
-// Instructors' names
+// Longest Instructors' Names
 // You are given a list of instructors and have to determine which instructor has the longest name.
 
 const instructorWithLongestName = function(instructors) {

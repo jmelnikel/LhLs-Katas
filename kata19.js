@@ -1,4 +1,4 @@
-// Quuen Threat Detector
+// Chess Queen Threat Detector
 // Write a function that will detect if two queens on a chess board can attack each other.
 
 let whiteQueen = [0, 0];

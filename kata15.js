@@ -1,4 +1,4 @@
-// Organizing Instructors
+// Organizing Instructors - Data Manipulation
 // Given a list of instructors, create a single object to organize them based on their course.
 
 const organizeInstructors = function(instructors) {

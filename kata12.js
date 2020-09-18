@@ -1,4 +1,4 @@
-// The Great Codeville Bake-off
+// The Great Codeville Bake-off - Recipe Matcher
 // Create a function called chooseRecipe(), which will receive three parameters: - An array of ingredients in stock at Bakery A - An array of ingredients in stock at Bakery B - An array of recipe objects. Each recipe has a name property(string) and an ingredient property(array). The chooseRecipe() function should return the name of the correct recipe.
 
 

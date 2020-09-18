@@ -1,4 +1,4 @@
-// Case Maker II
+// Text Case Maker II
 // Creat an advanced case maker function that can convert strings into all different kinds of case styles; like camel, pascal, snake, or even kebab.
 
 const makeCase = function(input, stringCase) {

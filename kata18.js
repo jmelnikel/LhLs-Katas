@@ -1,4 +1,4 @@
-// Square Code
+// Square Code Encryption
 // Creating a function that when given a string it returns Square Code. In Square Code, the spaces are removed from the english text and the characters are written into a rectangle. The message is then re-coded by reading down the columns going left to right.
 
 const squareCode = function(message) {
