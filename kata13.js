@@ -19,7 +19,7 @@ const talkingCalendar = function(date) {
 
   let year = date[0];
   
-  return `${month} ${day}, ${year}`
+  return `${month} ${day}, ${year}`;
 };
 
 console.log(talkingCalendar("2017/12/31"));

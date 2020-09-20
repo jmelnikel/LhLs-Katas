@@ -3,14 +3,14 @@
 
 const instructorWithLongestName = function(instructors) {
   let nameLength = 0;
-  let returnValue
+  let returnValue;
   for (let item of instructors) {
     if (item["name"].length > nameLength) {
       nameLength = item["name"].length;
       returnValue = item;
     }
   }
-  return returnValue
+  return returnValue;
 };
 
 console.log(instructorWithLongestName([

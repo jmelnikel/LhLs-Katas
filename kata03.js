@@ -12,7 +12,7 @@ const numberOfVowels = function(data) {
       }
     }
   }
-  return number
+  return number;
 };
 
 console.log(numberOfVowels("orange"));

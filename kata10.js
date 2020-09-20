@@ -6,7 +6,7 @@ const multiplicationTable = function(maxValue) {
   for (let i = 1; i <= maxValue; i++) {
     output += createLine(i, maxValue) + "\n";
   }
-  return output
+  return output;
 };
 
 const createLine = function(line, column) {

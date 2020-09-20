@@ -1,26 +1,26 @@
 // Smart Parking
 // Write a function called whereCanIPark() that returns the coordinates of an available parking spot for the vehicle, or returns false if there is no available spot. Our function receives an array of arrays representing parking spots, and a string with type of the vehicle that is looking for a parking spot. An upper-case letter means that the particular spot is AVAILABLE, while lower-case letters mean that the spot is UNAVAILABLE.
 
-const whereCanIPark = function (spots, vehicle) {
+const whereCanIPark = function(spots, vehicle) {
   if (vehicle === "motorcycle") {
-    return findSpot(spots, ["R", "S", "M"])
+    return findSpot(spots, ["R", "S", "M"]);
   } else if (vehicle === "small") {
-    return findSpot(spots, ["R", "S"])
+    return findSpot(spots, ["R", "S"]);
   } else {
-    return findSpot(spots, ["R"])
+    return findSpot(spots, ["R"]);
   }
 };
 
-const findSpot = function (array, criteria) {
+const findSpot = function(array, criteria) {
   for (let lineIndex in array) {
     for (let spotIndex in array[lineIndex]) {
       if (criteria.includes(array[lineIndex][spotIndex])) {
-        return [spotIndex, lineIndex]
-      } 
+        return [spotIndex, lineIndex];
+      }
     }
   }
-  return false
-}
+  return false;
+};
 
 
 console.log(whereCanIPark(
@@ -57,4 +57,4 @@ console.log(whereCanIPark(
     ['S', 'r', 'S', 'M', 'm', 'S']
   ],
   'motorcycle'
-))
+));

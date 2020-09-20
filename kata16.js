@@ -3,27 +3,27 @@
 
 const makeCase = function(input, stringCase) {
   if (stringCase === "camel") {
-    return camelCase(input)
+    return camelCase(input);
   }
   if (stringCase === "pascal") {
-    return pascalCase(input)
+    return pascalCase(input);
   }
   if (stringCase === "snake") {
-    return snakeCase(input)
+    return snakeCase(input);
   }
   if (stringCase === "kebab") {
-    return kebabCase(input)
+    return kebabCase(input);
   }
   if (stringCase === "title") {
-    return titleCase(input)
+    return titleCase(input);
   }
   if (stringCase === "vowel") {
-    return vowelCase(input)
+    return vowelCase(input);
   }
   if (stringCase === "consonant") {
-    return consonantCase(input)
+    return consonantCase(input);
   }
-}
+};
 
 console.log(makeCase("this is a string", "camel"));
 console.log(makeCase("this is a string", "pascal"));
@@ -36,38 +36,38 @@ console.log(makeCase("this is a string", "consonant"));
 
 function camelCase(input) {
   let arrayOfStrings = input.split(" ");
-  let arrayOfArrays = []
+  let arrayOfArrays = [];
   for (let string of arrayOfStrings) {
-    let stringArray = string.split("")
-    arrayOfArrays.push(stringArray)
+    let stringArray = string.split("");
+    arrayOfArrays.push(stringArray);
   }
   for (let i = 1; i <= arrayOfArrays.length - 1; i++) {
-    arrayOfArrays[i][0] = arrayOfArrays[i][0].toUpperCase()
+    arrayOfArrays[i][0] = arrayOfArrays[i][0].toUpperCase();
   }
-  let outputArray = []
+  let outputArray = [];
   for (let stringArray of arrayOfArrays) {
-    let string = stringArray.join("")
-    outputArray.push(string)
+    let string = stringArray.join("");
+    outputArray.push(string);
   }
-  return outputArray.join("")
-};
+  return outputArray.join("");
+}
 
 function pascalCase(input) {
   let arrayOfStrings = input.split(" ");
-  let arrayOfArrays = []
+  let arrayOfArrays = [];
   for (let string of arrayOfStrings) {
-    let stringArray = string.split("")
-    arrayOfArrays.push(stringArray)
+    let stringArray = string.split("");
+    arrayOfArrays.push(stringArray);
   }
   for (let i = 0; i <= arrayOfArrays.length - 1; i++) {
-    arrayOfArrays[i][0] = arrayOfArrays[i][0].toUpperCase()
+    arrayOfArrays[i][0] = arrayOfArrays[i][0].toUpperCase();
   }
-  let outputArray = []
+  let outputArray = [];
   for (let stringArray of arrayOfArrays) {
-    let string = stringArray.join("")
-    outputArray.push(string)
+    let string = stringArray.join("");
+    outputArray.push(string);
   }
-  return outputArray.join("")
+  return outputArray.join("");
 }
 
 function snakeCase(input) {
@@ -80,20 +80,20 @@ function kebabCase(input) {
 
 function titleCase(input) {
   let arrayOfStrings = input.split(" ");
-  let arrayOfArrays = []
+  let arrayOfArrays = [];
   for (let string of arrayOfStrings) {
-    let stringArray = string.split("")
-    arrayOfArrays.push(stringArray)
+    let stringArray = string.split("");
+    arrayOfArrays.push(stringArray);
   }
   for (let i = 0; i <= arrayOfArrays.length - 1; i++) {
-    arrayOfArrays[i][0] = arrayOfArrays[i][0].toUpperCase()
+    arrayOfArrays[i][0] = arrayOfArrays[i][0].toUpperCase();
   }
-  let outputArray = []
+  let outputArray = [];
   for (let stringArray of arrayOfArrays) {
-    let string = stringArray.join("")
-    outputArray.push(string)
+    let string = stringArray.join("");
+    outputArray.push(string);
   }
-  return outputArray.join(" ")
+  return outputArray.join(" ");
 }
 
 function vowelCase(input) {

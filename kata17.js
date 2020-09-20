@@ -7,18 +7,18 @@
 // 3) Multiple key-value pairs are separated using a & character: key1=value1&key2=value2
 
 const urlDecode = function(text) {
-  text = text.split("&")
+  text = text.split("&");
   let textArray = [];
   for (let item of text) {
-    item = item.split("%20").join(" ")
-    textArray.push(item)
+    item = item.split("%20").join(" ");
+    textArray.push(item);
   }
   let textObject = {};
   for (let item of textArray) {
-    item = item.split("=")
-    textObject[item[0]] = item[1] 
+    item = item.split("=");
+    textObject[item[0]] = item[1];
   }
-  return textObject
+  return textObject;
 };
 
 console.log(urlDecode("duck=rubber"));

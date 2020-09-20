@@ -3,8 +3,8 @@
 
 
 const sumLargestNumbers = function(data) {
-  data.sort((a, b) => b - a)
-  return data[0] + data [1]
+  data.sort((a, b) => b - a);
+  return data[0] + data [1];
 };
 
 console.log(sumLargestNumbers([1, 10]));

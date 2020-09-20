@@ -5,9 +5,9 @@ const organizeInstructors = function(instructors) {
   let output = {};
   for (let instructor of instructors) {
     if (!output[instructor["course"]]) {
-      output[instructor["course"]] = [instructor["name"]]
+      output[instructor["course"]] = [instructor["name"]];
     } else {
-      output[instructor["course"]].push(instructor["name"])
+      output[instructor["course"]].push(instructor["name"]);
     }
   }
   return output;

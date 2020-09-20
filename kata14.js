@@ -20,60 +20,60 @@ const calculateChange = function(total, cash) {
   let changeTotal = cash - total;
   let changeToGive = {};
   if (changeTotal > 2000) {
-    let array = calculateDenomination(changeTotal, 2000)
-    changeToGive["twentyDollar"] = array[0]
-    changeTotal = array[1]
+    let array = calculateDenomination(changeTotal, 2000);
+    changeToGive["twentyDollar"] = array[0];
+    changeTotal = array[1];
   }
   if (changeTotal > 1000) {
-    let array = calculateDenomination(changeTotal, 1000)
-    changeToGive["tenDollar"] = array[0]
-    changeTotal = array[1]
+    let array = calculateDenomination(changeTotal, 1000);
+    changeToGive["tenDollar"] = array[0];
+    changeTotal = array[1];
   }
   if (changeTotal > 500) {
-    let array = calculateDenomination(changeTotal, 500)
-    changeToGive["fiveDollar"] = array[0]
-    changeTotal = array[1]
+    let array = calculateDenomination(changeTotal, 500);
+    changeToGive["fiveDollar"] = array[0];
+    changeTotal = array[1];
   }
   if (changeTotal > 200) {
-    let array = calculateDenomination(changeTotal, 200)
-    changeToGive["twoDollar"] = array[0]
-    changeTotal = array[1]
+    let array = calculateDenomination(changeTotal, 200);
+    changeToGive["twoDollar"] = array[0];
+    changeTotal = array[1];
   }
   if (changeTotal > 100) {
-    let array = calculateDenomination(changeTotal, 100)
-    changeToGive["oneDollar"] = array[0]
-    changeTotal = array[1]
+    let array = calculateDenomination(changeTotal, 100);
+    changeToGive["oneDollar"] = array[0];
+    changeTotal = array[1];
   }
   if (changeTotal > 25) {
-    let array = calculateDenomination(changeTotal, 25)
-    changeToGive["quarter"] = array[0]
-    changeTotal = array[1]
+    let array = calculateDenomination(changeTotal, 25);
+    changeToGive["quarter"] = array[0];
+    changeTotal = array[1];
   }
   if (changeTotal > 10) {
-    let array = calculateDenomination(changeTotal, 10)
-    changeToGive["dime"] = array[0]
-    changeTotal = array[1]
+    let array = calculateDenomination(changeTotal, 10);
+    changeToGive["dime"] = array[0];
+    changeTotal = array[1];
   }
   if (changeTotal > 5) {
-    let array = calculateDenomination(changeTotal, 5)
-    changeToGive["nickle"] = array[0]
-    changeTotal = array[1]
+    let array = calculateDenomination(changeTotal, 5);
+    changeToGive["nickle"] = array[0];
+    changeTotal = array[1];
   }
   
   if (changeTotal > 1) {
-    let array = calculateDenomination(changeTotal, 1)
-    changeToGive["penny"] = array[0]
-    changeTotal = array[1]
+    let array = calculateDenomination(changeTotal, 1);
+    changeToGive["penny"] = array[0];
+    changeTotal = array[1];
   }
-  return changeToGive
+  return changeToGive;
 };
 
 const calculateDenomination = function(amount, denomination) {
   let change = amount / denomination;
-  let remainderCash = Math.round((change - Math.trunc(change)) * denomination)
-  let numberWholeBills = Math.trunc(change)
-  return [numberWholeBills, remainderCash]
-}
+  let remainderCash = Math.round((change - Math.trunc(change)) * denomination);
+  let numberWholeBills = Math.trunc(change);
+  return [numberWholeBills, remainderCash];
+};
 
 console.log(calculateChange(1787, 2000));
 console.log(calculateChange(2623, 4000));

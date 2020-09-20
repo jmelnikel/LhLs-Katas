@@ -5,34 +5,34 @@
 const chooseRecipe = function(bakeryA, bakeryB, recipes) {
   for (let i = 0; i < recipes.length; i++) {
     if (matchRecipeAndBakery(bakeryA, recipes[i]) && matchRecipeAndBakery(bakeryB, recipes[i])) {
-      return recipes[i]["name"]
+      return recipes[i]["name"];
     }
   }
-}
+};
 
 const matchRecipeAndBakery = function(bakery, recipe) {
   for (let ingredient of bakery) {
     if (recipe["ingredients"].includes(ingredient)) {
-      return true
+      return true;
     }
   }
-}
+};
 
 let bakeryA = ['saffron', 'eggs', 'tomato paste', 'coconut', 'custard'];
 let bakeryB = ['milk', 'butter', 'cream cheese'];
 let recipes = [
-    {
-        name: 'Coconut Sponge Cake',
-        ingredients: ['coconut', 'cake base']
-    },
-    {
-        name: 'Persian Cheesecake',
-        ingredients: ['saffron', 'cream cheese']
-    },
-    {
-        name: 'Custard Surprise',
-        ingredients: ['custard', 'ground beef']
-    }
+  {
+    name: 'Coconut Sponge Cake',
+    ingredients: ['coconut', 'cake base']
+  },
+  {
+    name: 'Persian Cheesecake',
+    ingredients: ['saffron', 'cream cheese']
+  },
+  {
+    name: 'Custard Surprise',
+    ingredients: ['custard', 'ground beef']
+  }
 ];
 
 console.log(chooseRecipe(bakeryA, bakeryB, recipes));
@@ -40,18 +40,18 @@ console.log(chooseRecipe(bakeryA, bakeryB, recipes));
 bakeryA = ['potatoes', 'bay leaf', 'raisins'];
 bakeryB = ['red bean', 'dijon mustard', 'apples'];
 recipes = [
-    {
-        name: 'Potato Ganache',
-        ingredients: ['potatoes', 'chocolate']
-    },
-    {
-        name: 'Sweet Fish',
-        ingredients: ['anchovies', 'honey']
-    },
-    {
-        name: "Nima's Famous Dijon Raisins",
-        ingredients: ['dijon mustard', 'raisins']
-    }
+  {
+    name: 'Potato Ganache',
+    ingredients: ['potatoes', 'chocolate']
+  },
+  {
+    name: 'Sweet Fish',
+    ingredients: ['anchovies', 'honey']
+  },
+  {
+    name: "Nima's Famous Dijon Raisins",
+    ingredients: ['dijon mustard', 'raisins']
+  }
 ];
 
 console.log(chooseRecipe(bakeryA, bakeryB, recipes));

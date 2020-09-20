@@ -4,10 +4,10 @@
 const squareCode = function(message) {
   let array = message.split(" ").join("").split("");
   let num = Math.ceil(Math.sqrt(array.length));
-  let tempArray
+  let tempArray;
   let finalArray = [];
   
-  let createArray = function (array) {
+  let createArray = function(array) {
     if (array.length === 0) {
       return;
     } else if (array.length < num) {
@@ -15,31 +15,31 @@ const squareCode = function(message) {
       return;
     } else {
       tempArray = [];
-      for (i = 0; i < num; i++) {
+      for (let i = 0; i < num; i++) {
         tempArray.push(array.shift());
-      };
+      }
       finalArray.push(tempArray);
-    };
+    }
     createArray(array);
   };
-  // console.log("This is array", array)
+  
   createArray(array);
   
   let line = "";
-  let createLine = function (finalArray) {
+  let createLine = function(finalArray) {
     if (finalArray[0].length === 0) {
       return;
     } else {
-      finalArray.forEach(function (subArray) {
+      finalArray.forEach(function(subArray) {
         if (subArray.length === 0) {
           return;
         } else {
           line += subArray.shift();
           return line;
-        };
+        }
       });
       line += " ";
-    };
+    }
     
     createLine(finalArray);
     return line;
