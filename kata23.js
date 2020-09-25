@@ -13,7 +13,7 @@ const convertToPigLatin = function(string) {
 
 let reversedStrings = "";
 for (let item of args) {
-  reversedStrings += convertToPigLatin(item)
+  reversedStrings += convertToPigLatin(item);
 }
 
-console.log(reversedStrings)
+console.log(reversedStrings);
