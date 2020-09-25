@@ -15,7 +15,7 @@ These are javascript exercises to work with functions, methods, loops, objects, 
 10. Kata 10 - Multiplication Table
 11. Kata 11 - Bouncy Castles - Volumes of Shapes
 12. Kata 12 - The Great Codeville Bake-off - Recipe Matcher
-13. Kata 13 - Talking Calendar - Date Converter
+13. Kata 13 - Talking Calendar - Date Format Converter
 14. Kata 14 - Change Calculator
 15. Kata 15 - Organizing Instructors - Data Manipulation
 16. Kata 16 - Text Case Maker II
@@ -24,3 +24,5 @@ These are javascript exercises to work with functions, methods, loops, objects, 
 19. Kata 19 - Chess Queen Threat Detector
 20. Kata 20 - Taxi Cab Geometry
 21. Kata 21 - Number Guesser
+22. Kata 22 - Reversing a String - Using CLI arguments.
+

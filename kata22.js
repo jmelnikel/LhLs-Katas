@@ -5,13 +5,13 @@ let args = process.argv;
 args.splice(0, 2);
 
 const reverseString = function(string) {
-  let output = ""
+  let output = "";
   for (let i = string.length - 1; i >= 0; i--) {
-    output += string[i]
+    output += string[i];
   }
-  return output
-}
+  return output;
+};
 
 for (let item of args) {
-  console.log(reverseString(item))
+  console.log(reverseString(item));
 }
