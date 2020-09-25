@@ -23,3 +23,4 @@ These are javascript exercises to work with functions, methods, loops, objects, 
 18. Kata 18 - Square Code Encryption
 19. Kata 19 - Chess Queen Threat Detector
 20. Kata 20 - Taxi Cab Geometry
+21. Kata 21 - Number Guesser
