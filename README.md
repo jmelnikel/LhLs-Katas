@@ -26,3 +26,4 @@ These are javascript exercises to work with functions, methods, loops, objects, 
 21. Kata 21 - Number Guesser
 22. Kata 22 - Reversing a String - Using CLI arguments.
 23. Kata 23 - Pig Latin Translator - Using CLI arguments.
+24. Kata 24 - Password Obfuscator
