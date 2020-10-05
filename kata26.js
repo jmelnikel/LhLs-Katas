@@ -26,35 +26,41 @@ const companySalesData = [
 
 
 const calculateSalesTax = function(salesData, taxRates) {
-  const output = createObjectOfCompanyNames(salesData)
-  console.log("createObjectOfCompanyNames", output)
-  
-
+  let output = createObjectOfCompanyNames(salesData);
+  for (let sales of salesData) {
+    let totalSales = calculateTotalSales(sales.sales);
+    output[sales.name].totalSales += totalSales;
+    let totalTaxes = calculateTotalTaxes(totalSales, taxRates, sales.province);
+    output[sales.name].totalTaxes += totalTaxes;
+  }
+  return output;
 };
+console.log(calculateSalesTax(companySalesData, salesTaxRates));
 
-calculateSalesTax(companySalesData, salesTaxRates)
 
 // Helper Function Expressions - These will be hoisted.
 function createObjectOfCompanyNames(salesData) {
   const output = {};
   for (let data of salesData) {
-    output[data["name"]] = undefined;
+    output[data.name] = {
+      totalSales: 0,
+      totalTaxes: 0
+    };
   }
-  return output
+  return output;
 }
 
 
-function createCompanyObject() {
-
+function calculateTotalSales(salesArray) {
+  let output = 0;
+  for (let sale of salesArray) {
+    output += sale;
+  }
+  return output;
 }
 
 
-function calculateTotalSales() {
-  
-}
-
-
-function calculateTotalTaxes() {
-  const output = {};
-
+function calculateTotalTaxes(salesTotal, taxRates, province) {
+  let taxRate = taxRates[province];
+  return salesTotal * taxRate;
 }
