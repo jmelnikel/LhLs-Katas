@@ -36,8 +36,14 @@ const data = {
 
 // 3. This function returns a list of all the individuals with the names of thier followers and whom they follow.
 const printAll = function(data) {
-  const listOfNames = createListOfNames(data);
-  console.log(listOfNames)
+  const listOfNamesObject = createListOfNames(data);
+  // console.log(listOfNamesObject)
+  
+
+
+  const followsList = createFollowsList(data, "f04")
+  // console.log(followsList)
+
 } 
 
 printAll(data)
@@ -45,18 +51,22 @@ printAll(data)
 // Helper Function Expressions - These will be hoisted.
 function createListOfNames(data) {
   let output = [];
-  for (let person in data) {
-    let name = data[person].name;
-    let name = {
-      followers: 0,
-      follows: 0
-    }
-    output.push(name);
+  for (let personID in data) {
+    let test = {};
+    output.push(test)
   }
+  console.log(output)
   return output;
 }  
 
-
+function createFollowsList(data, personID) {
+  let output = [];
+  let followsIDArray = data[personID].follows;
+  for (let followsID of followsIDArray) {
+    output.push(data[followsID].name)
+  }
+  return output;
+}
 
 
 // 1. This function returns the name of the individual(s) who follows the most people. The output is an array as there maybe multiple people.
