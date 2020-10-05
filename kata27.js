@@ -34,10 +34,23 @@ const data = {
   }
 };
 
+// 3. This function returns a list of all the individuals with the names of thier followers and whom they follow.
+const printAll = function(data) {
+  const listOfNames = createListOfNames(data);
+  console.log(listOfNames)
+} 
 
+printAll(data)
 
-
-
+// Helper Function Expressions - These will be hoisted.
+function createListOfNames(data) {
+  let output = [];
+  for (let person in data) {
+    let name = data[person].name;
+    output.push(name);
+  }
+  return output;
+}  
 
 
 
