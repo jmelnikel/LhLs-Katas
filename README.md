@@ -1,6 +1,6 @@
 # Lighthouse Labs Javascript Exercises
 
-These are javascript exercises to work with functions, methods, loops, objects, and arrays.
+These are javascript exercises to work with functions, conditionals, loops, objects, and arrays.
 
 ### Table of Contents
 1. Kata 01 - Sum the Largest Numbers
@@ -28,3 +28,4 @@ These are javascript exercises to work with functions, methods, loops, objects, 
 23. Kata 23 - Pig Latin Translator - Using CLI arguments.
 24. Kata 24 - Password Obfuscator
 25. Kata 25 - Print in Frame
+26. Kata 26 - Sales Tax
