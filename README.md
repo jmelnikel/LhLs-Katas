@@ -28,4 +28,5 @@ These are javascript exercises to work with functions, conditionals, loops, obje
 23. Kata 23 - Pig Latin Translator - Using CLI arguments.
 24. Kata 24 - Password Obfuscator
 25. Kata 25 - Print in Frame
-26. Kata 26 - Sales Tax
+26. Kata 26 - Sales Tax - Nested objects and arrays
+27. kata 27 - Social Network Analysis: Part I - Nested objects and arrays
