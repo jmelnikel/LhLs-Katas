@@ -47,6 +47,10 @@ function createListOfNames(data) {
   let output = [];
   for (let person in data) {
     let name = data[person].name;
+    let name = {
+      followers: 0,
+      follows: 0
+    }
     output.push(name);
   }
   return output;
