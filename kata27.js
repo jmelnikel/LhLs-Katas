@@ -37,12 +37,15 @@ const data = {
 // 3. This function returns a list of all the individuals with the names of thier followers and whom they follow.
 const printAll = function(data) {
   const listOfNamesObject = createListOfNames(data);
-  // console.log(listOfNamesObject)
+  for (let personID in data) {
+    let name = data[personID].name;
+    let followsList = createFollowsList(data, personID);
+    listOfNamesObject[name].follows = followsList;
+  }
   
 
 
-  const followsList = createFollowsList(data, "f04")
-  // console.log(followsList)
+  console.log(listOfNamesObject);
 
 } 
 
@@ -50,12 +53,14 @@ printAll(data)
 
 // Helper Function Expressions - These will be hoisted.
 function createListOfNames(data) {
-  let output = [];
+  let output = {};
   for (let personID in data) {
-    let test = {};
-    output.push(test)
+    let name = data[personID].name;
+    output[name] = {
+      followers: [],
+      follows: []
+    };
   }
-  console.log(output)
   return output;
 }  
 
@@ -68,19 +73,29 @@ function createFollowsList(data, personID) {
   return output;
 }
 
+function createFollowersList(data, personID) {
+  let output = [];
+  
+}
+
+
+
+
+
+
 
 // 1. This function returns the name of the individual(s) who follows the most people. The output is an array as there maybe multiple people.
 const biggestFollower = function(data) {
   let longestLength = 0;
   let output = [];
-  for (let person in data) {
-    let arrayOfFollows = data[person].follows;
+  for (let personID in data) {
+    let arrayOfFollows = data[personID].follows;
     if (arrayOfFollows.length === longestLength) {
-      output.push(data[person].name);
+      output.push(data[personID].name);
     } else if (arrayOfFollows.length > longestLength) {
       longestLength = arrayOfFollows.length;
       output = [];
-      output.push(data[person].name);
+      output.push(data[personID].name);
     }
   }
   return output;
@@ -94,13 +109,13 @@ const mostPopular = function(data) {
   const followsTally = createFollowsTally(arrayOfFollows);
   let mostFollowers = 0;
   let output = [];
-  for (let person in followsTally) {
-    if (followsTally[person] === mostFollowers) {
-      output.push(person);
-    } else if (followsTally[person] > mostFollowers) {
-      mostFollowers = followsTally[person];
+  for (let personID in followsTally) {
+    if (followsTally[personID] === mostFollowers) {
+      output.push(personID);
+    } else if (followsTally[personID] > mostFollowers) {
+      mostFollowers = followsTally[personID];
       output = [];
-      output.push(person);
+      output.push(personID);
     }
   }
   return output;
@@ -110,8 +125,8 @@ const mostPopular = function(data) {
 // Helper Function Expressions - These will be hoisted.
 function createArrayOfFollows(data) {
   let arrayOfFollows = [];
-  for (let person in data) {
-    arrayOfFollows = arrayOfFollows.concat(data[person].follows);
+  for (let personID in data) {
+    arrayOfFollows = arrayOfFollows.concat(data[personID].follows);
   }
   return arrayOfFollows;
 }
