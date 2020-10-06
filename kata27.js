@@ -34,55 +34,6 @@ const data = {
   }
 };
 
-// 3. This function returns a list of all the individuals with the names of thier followers and whom they follow.
-const printAll = function(data) {
-  const listOfNamesObject = createListOfNames(data);
-  for (let personID in data) {
-    let name = data[personID].name;
-    let followsList = createFollowsList(data, personID);
-    listOfNamesObject[name].follows = followsList;
-  }
-  
-
-
-  console.log(listOfNamesObject);
-
-} 
-
-printAll(data)
-
-// Helper Function Expressions - These will be hoisted.
-function createListOfNames(data) {
-  let output = {};
-  for (let personID in data) {
-    let name = data[personID].name;
-    output[name] = {
-      followers: [],
-      follows: []
-    };
-  }
-  return output;
-}  
-
-function createFollowsList(data, personID) {
-  let output = [];
-  let followsIDArray = data[personID].follows;
-  for (let followsID of followsIDArray) {
-    output.push(data[followsID].name)
-  }
-  return output;
-}
-
-function createFollowersList(data, personID) {
-  let output = [];
-  
-}
-
-
-
-
-
-
 
 // 1. This function returns the name of the individual(s) who follows the most people. The output is an array as there maybe multiple people.
 const biggestFollower = function(data) {
@@ -147,4 +98,47 @@ function createFollowsTally(arrayOfFollows) {
   return followsTally;
 }
 
+
+// 3. This function returns a list of all the individuals with the names of thier followers and whom they follow.
+const printAll = function(data) {
+  const listOfNamesObject = createListOfNames(data);
+  for (let personID in data) {
+    let name = data[personID].name;
+    let followsList = createFollowsList(data, personID);
+    listOfNamesObject[name].follows = followsList;
+  }
+  
+  for (let personID in data) {
+    let followersArray = data[personID].follows
+    for (let follower of followersArray) {
+      let followerName =  data[follower].name
+      let followeeName = data[personID].name
+      listOfNamesObject[followerName].followers.push(followeeName)
+    }
+  }
+  return listOfNamesObject
+} 
+// console.log(printAll(data))
+
+// Helper Function Expressions - These will be hoisted.
+function createListOfNames(data) {
+  let output = {};
+  for (let personID in data) {
+    let name = data[personID].name;
+    output[name] = {
+      followers: [],
+      follows: []
+    };
+  }
+  return output;
+}  
+
+function createFollowsList(data, personID) {
+  let output = [];
+  let followsIDArray = data[personID].follows;
+  for (let followsID of followsIDArray) {
+    output.push(data[followsID].name)
+  }
+  return output;
+}
 
