@@ -73,7 +73,7 @@ const mostPopular = function(data) {
 };
 console.log(mostPopular(data));
 
-// Helper Function Expressions for #2 - These will be hoisted.
+// Helper Function Declarations for #2 - These will be hoisted.
 function createArrayOfFollows(data) {
   let arrayOfFollows = [];
   for (let personID in data) {
@@ -120,7 +120,7 @@ const printAll = function(data) {
 };
 console.log(printAll(data))
 
-// Helper Function Expressions for #3 - These will be hoisted.
+// Helper Function Declarations for #3 - These will be hoisted.
 function createListOfNames(data) {
   let output = {};
   for (let personID in data) {

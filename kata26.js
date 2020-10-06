@@ -38,7 +38,7 @@ const calculateSalesTax = function(salesData, taxRates) {
 console.log(calculateSalesTax(companySalesData, salesTaxRates));
 
 
-// Helper Function Expressions - These will be hoisted.
+// Helper Function Declarations - These will be hoisted.
 function createObjectOfCompanyNames(salesData) {
   const output = {};
   for (let data of salesData) {
