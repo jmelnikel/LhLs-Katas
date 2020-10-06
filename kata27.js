@@ -142,3 +142,19 @@ function createFollowsList(data, personID) {
   return output;
 }
 
+
+// 4. This function returns a list of names of individuals who follow someone that doesn't follow them back.
+const unrequitedFollowers = function(data) {
+  const output = [];
+  for (let personID in data) {
+    let followsArray = data[personID].follows
+    for (let follow of followsArray) {
+      if (!data[follow].follows.includes(personID)) {
+        if (!output.includes(data[personID].name)) {
+          output.push(data[personID].name)
+        }
+      }
+    }
+  }
+};
+// console.log(unrequitedFollowers(data));
