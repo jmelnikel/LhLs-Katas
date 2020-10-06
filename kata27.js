@@ -51,7 +51,7 @@ const biggestFollower = function(data) {
   }
   return output;
 };
-// console.log(biggestFollower(data));
+console.log(biggestFollower(data));
 
 
 //2. This function returns the name of the individual who has the most followers. The output is an array as there maybe multiple people.
@@ -71,9 +71,9 @@ const mostPopular = function(data) {
   }
   return output;
 };
-// console.log(mostPopular(data));
+console.log(mostPopular(data));
 
-// Helper Function Expressions - These will be hoisted.
+// Helper Function Expressions for #2 - These will be hoisted.
 function createArrayOfFollows(data) {
   let arrayOfFollows = [];
   for (let personID in data) {
@@ -109,18 +109,18 @@ const printAll = function(data) {
   }
   
   for (let personID in data) {
-    let followersArray = data[personID].follows
+    let followersArray = data[personID].follows;
     for (let follower of followersArray) {
-      let followerName =  data[follower].name
-      let followeeName = data[personID].name
-      listOfNamesObject[followerName].followers.push(followeeName)
+      let followerName =  data[follower].name;
+      let followeeName = data[personID].name;
+      listOfNamesObject[followerName].followers.push(followeeName);
     }
   }
-  return listOfNamesObject
-} 
-// console.log(printAll(data))
+  return listOfNamesObject;
+};
+console.log(printAll(data))
 
-// Helper Function Expressions - These will be hoisted.
+// Helper Function Expressions for #3 - These will be hoisted.
 function createListOfNames(data) {
   let output = {};
   for (let personID in data) {
@@ -131,13 +131,13 @@ function createListOfNames(data) {
     };
   }
   return output;
-}  
+}
 
 function createFollowsList(data, personID) {
   let output = [];
   let followsIDArray = data[personID].follows;
   for (let followsID of followsIDArray) {
-    output.push(data[followsID].name)
+    output.push(data[followsID].name);
   }
   return output;
 }
@@ -147,14 +147,14 @@ function createFollowsList(data, personID) {
 const unrequitedFollowers = function(data) {
   const output = [];
   for (let personID in data) {
-    let followsArray = data[personID].follows
+    let followsArray = data[personID].follows;
     for (let follow of followsArray) {
       if (!data[follow].follows.includes(personID)) {
         if (!output.includes(data[personID].name)) {
-          output.push(data[personID].name)
+          output.push(data[personID].name);
         }
       }
     }
   }
 };
-// console.log(unrequitedFollowers(data));
+console.log(unrequitedFollowers(data));
