@@ -28,5 +28,7 @@ These are javascript exercises to work with functions, conditionals, loops, obje
 23. Kata 23 - Pig Latin Translator - Using CLI arguments.
 24. Kata 24 - Password Obfuscator
 25. Kata 25 - Print in Frame
-26. Kata 26 - Sales Tax - Nested objects and arrays
-27. kata 27 - Social Network Analysis: Part I: Four modules - Nested objects and arrays
+26. Kata 26 - Sales Tax - Nested objects and arrays.
+27. Kata 27 - Social Network Analysis: Part I: Four modules - Nested objects and arrays.
+28. Kata 28 - Sum from a to b Recursively.
+29. Kata 29 - Sum Array of Numbers Recursively.
