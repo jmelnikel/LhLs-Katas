@@ -5,13 +5,12 @@ function sumItems(array) {
   let total = 0;
   for (let item of array) {
     if (Array.isArray(item)) {
-      total += sumItems(item)
+      total += sumItems(item);
     } else {
-      total += item
+      total += item;
     }
   }
   return total;
 }
 
-console.log(sumItems([[1, 2, [[3], 4]], 5, []]))
-
+console.log(sumItems([[1, 2, [[3], 4]], 5, []]));

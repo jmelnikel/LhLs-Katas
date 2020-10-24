@@ -107,18 +107,18 @@ const printAll = function(data) {
     let followsList = createFollowsList(data, personID);
     listOfNamesObject[name].follows = followsList;
   }
-  
+
   for (let personID in data) {
     let followersArray = data[personID].follows;
     for (let follower of followersArray) {
-      let followerName =  data[follower].name;
+      let followerName = data[follower].name;
       let followeeName = data[personID].name;
       listOfNamesObject[followerName].followers.push(followeeName);
     }
   }
   return listOfNamesObject;
 };
-console.log(printAll(data))
+console.log(printAll(data));
 
 // Helper Function Declarations for #3 - These will be hoisted.
 function createListOfNames(data) {
