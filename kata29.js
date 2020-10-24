@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 // Sum Array of Numbers Recursively
 // This function takes an array of numbers (with possible nested arrays of numbers) and sums all the numbers recursively.
 

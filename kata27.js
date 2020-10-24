@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 // Social Network Analysis: Part I
 // See below for various function descriptions.
 

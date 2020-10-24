@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 // Taxi Cab Geometry
 // Write a function to help taxicabs determine how far away a destination is based on the directions given.
 
@@ -10,7 +11,7 @@ const blocksAway = function(directions) {
     tempArray.push(directions.shift());
     arrayOfArrays.push(tempArray);
   }
-  
+
   const distance = { "east": 0, "north": 0 };
   let currentDirection = "";
   if (arrayOfArrays[0][0] === "right") {

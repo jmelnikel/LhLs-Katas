@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 // Luhn Algorithm
 // This function takes a number and return wether it is valid based on the Luhn Algorithm
 

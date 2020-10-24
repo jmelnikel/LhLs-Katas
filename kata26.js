@@ -10,17 +10,17 @@ const companySalesData = [
   {
     name: "Telus",
     province: "BC",
-    sales: [ 100, 200, 400 ]
+    sales: [100, 200, 400]
   },
   {
     name: "Bombardier",
     province: "AB",
-    sales: [ 80, 20, 10, 100, 90, 500 ]
+    sales: [80, 20, 10, 100, 90, 500]
   },
   {
     name: "Telus",
     province: "SK",
-    sales: [ 500, 100 ]
+    sales: [500, 100]
   }
 ];
 
@@ -39,6 +39,7 @@ console.log(calculateSalesTax(companySalesData, salesTaxRates));
 
 
 // Helper Function Declarations - These will be hoisted.
+// eslint-disable-next-line func-style
 function createObjectOfCompanyNames(salesData) {
   const output = {};
   for (let data of salesData) {

@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 // Print In Frame
 // Create a function that takes a string and returns the string in a frame.
 

@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 // Stock Market Maximum Profit
 // This function, when given a list of stock prices for a given day, returns the maximum profit that could have been made by buying a stock at the given price and then selling the stock later on.
 
