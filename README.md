@@ -1,6 +1,6 @@
 # Lighthouse Labs Javascript Exercises
 
-These are javascript exercises to work with functions, conditionals, loops, objects, and arrays.
+These are javascript exercises to work with functions, conditionals, loops, objects, arrays, recursion, and testing.
 
 ### Table of Contents
 1. Kata 01 - Sum the Largest Numbers
@@ -32,3 +32,4 @@ These are javascript exercises to work with functions, conditionals, loops, obje
 27. Kata 27 - Social Network Analysis: Part I: Four modules - Nested objects and arrays.
 28. Kata 28 - Sum from a to b Recursively.
 29. Kata 29 - Sum Array of Numbers Recursively.
+30. Kata 30 - Luhn Algorithm with unit testing (Mocha/Chai).

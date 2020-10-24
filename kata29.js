@@ -1,5 +1,5 @@
 // Sum Array of Numbers Recursively
-// This function takes an array of numbers (with possibel nested arrays of numbers) and sum all the number recursively.
+// This function takes an array of numbers (with possible nested arrays of numbers) and sums all the numbers recursively.
 
 function sumItems(array) {
   let total = 0;

@@ -1,0 +1,23 @@
+{
+  "name": "lhls-katas",
+  "version": "1.0.0",
+  "description": "These are javascript exercises to work with functions, conditionals, loops, objects, arrays, recursion, and testing.",
+  "main": "kata01.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmelnikel/LhLs-Katas.git"
+  },
+  "author": "Jason Melnikel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmelnikel/LhLs-Katas/issues"
+  },
+  "homepage": "https://github.com/jmelnikel/LhLs-Katas#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.0"
+  }
+}
