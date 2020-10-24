@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 // Sales Tax
 // This function calculates the total sales and total tax, grouped by company.
 const salesTaxRates = {
