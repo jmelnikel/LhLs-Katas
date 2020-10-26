@@ -34,4 +34,4 @@ These are javascript exercises to work with functions, conditionals, loops, obje
 29. Kata 29 - Sum Array of Numbers Recursively.
 30. Kata 30 - Luhn Algorithm with unit testing (Mocha/Chai).
 31. Kata 31 - Stock Market Maximum Profit.
-32. Kata 31 - Poppin Bottles.
+32. Kata 31 - Poppin Bottles. - Using recursion and objects.
