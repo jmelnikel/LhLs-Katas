@@ -35,4 +35,5 @@ These are javascript exercises to work with functions, conditionals, loops, obje
 30. Kata 30 - Luhn Algorithm with unit testing (Mocha/Chai).
 31. Kata 31 - Stock Market Maximum Profit.
 32. Kata 32 - Poppin Bottles. - Using recursion and objects.
-33. Kata 33 - Title Case.
+33. Kata 33 - Title Case
+34. Kata 34 - Shift Cipher with unit testing (Mocha/Chai).
