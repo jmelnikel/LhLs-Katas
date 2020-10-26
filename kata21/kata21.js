@@ -8,11 +8,9 @@ let prompt = require("prompt-sync")();
 let numberofGuesses = 0;
 let previousGuesses = [];
 
-let guessNumber = function(randomNumber, numberofGuesses) {
+let guessNumber = (randomNumber, numberofGuesses) => {
   let stringAnswer = prompt("Guess a number between 1 and 100 or 'Exit' to exit: ");
-  if (stringAnswer === "Exit") {
-    return console.log("Goodbye");
-  }
+  if (stringAnswer === "Exit") return console.log("Goodbye");
 
   let answer = parseInt(stringAnswer);
   if (!Number.isInteger(answer)) {
@@ -20,14 +18,14 @@ let guessNumber = function(randomNumber, numberofGuesses) {
   }
 
   if (randomNumber === answer) {
-    numberofGuesses ++;
+    numberofGuesses++;
     return console.log(`Congratulations, you guessed it! ${answer} is the number. It took you ${numberofGuesses} tries.`);
   }
   if (previousGuesses.includes(answer)) {
     console.log(`Your already tried ${answer}.`);
   } else {
     previousGuesses.push(answer);
-    numberofGuesses ++;
+    numberofGuesses++;
     if (randomNumber < answer) {
       console.log(`Your guess of ${answer} is too high.`);
     }
@@ -37,6 +35,6 @@ let guessNumber = function(randomNumber, numberofGuesses) {
   }
   guessNumber(randomNumber, numberofGuesses);
 };
-  
-const randomNumber = Math.ceil((Math.random() * 100)); // number
+
+const randomNumber = Math.ceil((Math.random() * 100));
 guessNumber(randomNumber, numberofGuesses);

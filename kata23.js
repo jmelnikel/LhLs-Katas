@@ -4,7 +4,7 @@
 
 let args = process.argv.slice(2);
 
-const convertToPigLatin = function(string) {
+const convertToPigLatin = string => {
   let output = string.slice(1);
   output += `${string[0]}ay `;
   return output;

@@ -6,7 +6,7 @@
 // 2) Key-value pairs are represented using an = character: key=value
 // 3) Multiple key-value pairs are separated using a & character: key1=value1&key2=value2
 
-const urlDecode = function(text) {
+const urlDecode = text => {
   text = text.split("&");
   let textArray = [];
   for (let item of text) {

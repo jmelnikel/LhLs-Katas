@@ -1,7 +1,7 @@
 // Conditional Sums
 // Add only the numbers in the array which match the given condition (even or odd).
 
-const conditionalSum = function(values, condition) {
+const conditionalSum = (values, condition) => {
   let sum;
   if (condition === "even") {
     let filtered = values.filter(num => num % 2 === 0);
@@ -14,8 +14,6 @@ const conditionalSum = function(values, condition) {
   }
   return sum;
 };
-
-
 
 console.log(conditionalSum([1, 2, 3, 4, 5], "even"));
 console.log(conditionalSum([1, 2, 3, 4, 5], "odd"));

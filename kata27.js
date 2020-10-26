@@ -35,9 +35,8 @@ const data = {
   }
 };
 
-
 // 1. This function returns the name of the individual(s) who follows the most people. The output is an array as there maybe multiple people.
-const biggestFollower = function(data) {
+const biggestFollower = data => {
   let longestLength = 0;
   let output = [];
   for (let personID in data) {
@@ -54,9 +53,8 @@ const biggestFollower = function(data) {
 };
 console.log(biggestFollower(data));
 
-
 //2. This function returns the name of the individual who has the most followers. The output is an array as there maybe multiple people.
-const mostPopular = function(data) {
+const mostPopular = data => {
   const arrayOfFollows = createArrayOfFollows(data);
   const followsTally = createFollowsTally(arrayOfFollows);
   let mostFollowers = 0;
@@ -74,7 +72,7 @@ const mostPopular = function(data) {
 };
 console.log(mostPopular(data));
 
-// Helper Function Declarations for #2 - These will be hoisted.
+// function declarations will be hoisted
 function createArrayOfFollows(data) {
   let arrayOfFollows = [];
   for (let personID in data) {
@@ -101,7 +99,7 @@ function createFollowsTally(arrayOfFollows) {
 
 
 // 3. This function returns a list of all the individuals with the names of thier followers and whom they follow.
-const printAll = function(data) {
+const printAll = data => {
   const listOfNamesObject = createListOfNames(data);
   for (let personID in data) {
     let name = data[personID].name;
@@ -121,7 +119,7 @@ const printAll = function(data) {
 };
 console.log(printAll(data));
 
-// Helper Function Declarations for #3 - These will be hoisted.
+// function declarations will be hoisted
 function createListOfNames(data) {
   let output = {};
   for (let personID in data) {
@@ -143,9 +141,8 @@ function createFollowsList(data, personID) {
   return output;
 }
 
-
 // 4. This function returns a list of names of individuals who follow someone that doesn't follow them back.
-const unrequitedFollowers = function(data) {
+const unrequitedFollowers = data => {
   const output = [];
   for (let personID in data) {
     let followsArray = data[personID].follows;

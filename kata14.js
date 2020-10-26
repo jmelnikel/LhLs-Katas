@@ -16,7 +16,7 @@ Nickel (5)
 Penny (1)
 */
 
-const calculateChange = function(total, cash) {
+const calculateChange = (total, cash) => {
   let changeTotal = cash - total;
   let changeToGive = {};
   if (changeTotal > 2000) {
@@ -59,7 +59,6 @@ const calculateChange = function(total, cash) {
     changeToGive["nickle"] = array[0];
     changeTotal = array[1];
   }
-  
   if (changeTotal > 1) {
     let array = calculateDenomination(changeTotal, 1);
     changeToGive["penny"] = array[0];
@@ -68,7 +67,7 @@ const calculateChange = function(total, cash) {
   return changeToGive;
 };
 
-const calculateDenomination = function(amount, denomination) {
+const calculateDenomination = (amount, denomination) => {
   let change = amount / denomination;
   let remainderCash = Math.round((change - Math.trunc(change)) * denomination);
   let numberWholeBills = Math.trunc(change);

@@ -1,11 +1,11 @@
 // Talking Calendar - Date Converter
 // Given a date as a string (not a Date object) formatted as YYYY/MM/DD. Create a function to produce a human readable date (December 2nd, 2017).
 
-const talkingCalendar = function(date) {
+const talkingCalendar = date => {
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   date = date.split("/"); // [ '2017', '08', '02' ]
   let month = months[Number.parseInt(date[1]) - 1];
-  
+
   let day = Number.parseInt(date[2]);
   if ([1, 21, 31].includes(day)) {
     day = day.toString() + "st";
@@ -18,7 +18,7 @@ const talkingCalendar = function(date) {
   }
 
   let year = date[0];
-  
+
   return `${month} ${day}, ${year}`;
 };
 

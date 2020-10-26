@@ -5,7 +5,7 @@
 const string = "May the force be with you";
 const stringArray = string.split(" ");
 
-const printInFrame = function(stringArray) {
+const printInFrame = stringArray => {
   const frameWidth = determineFrameWidth(stringArray);
   console.log(createTopBottomBorder(frameWidth));
   for (let stringItem of stringArray) {
@@ -16,7 +16,7 @@ const printInFrame = function(stringArray) {
 
 printInFrame(stringArray);
 
-// Helper Functions - These will be hoisted.
+// function declarations will be hoisted
 function determineFrameWidth(stringArray) {
   let output = 0;
   for (let item of stringArray) {

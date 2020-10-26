@@ -4,7 +4,7 @@
 
 let args = process.argv.slice(2)[0];
 
-const obfuscate = function(string) {
+const obfuscate = string => {
   let output = "";
   for (let letter of string) {
     if (letter === "a") {

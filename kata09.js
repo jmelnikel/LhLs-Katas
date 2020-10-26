@@ -1,8 +1,7 @@
 // Text Case Maker
 // Create a function that when it receives a normal string of words separated with spaces as the input. Our job is to convert these strings into camel cased strings.
 
-
-const camelCase = function(input) {
+const camelCase = input => {
   let arrayOfStrings = input.split(" ");
   let arrayOfArrays = [];
   for (let string of arrayOfStrings) {

@@ -1,7 +1,7 @@
 // Counting Vowels
 // Count the number of vowels (a, e, i, o, and u) that appear in a given string.
 
-const numberOfVowels = function(data) {
+const numberOfVowels = data => {
   let number = 0;
   let vowels = ["a", "e", "i", "o", "u"];
 

@@ -1,8 +1,7 @@
-/* eslint-disable func-style */
 // Sum Array of Numbers Recursively
 // This function takes an array of numbers (with possible nested arrays of numbers) and sums all the numbers recursively.
 
-function sumItems(array) {
+const sumItems = array => {
   let total = 0;
   for (let item of array) {
     if (Array.isArray(item)) {

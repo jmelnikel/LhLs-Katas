@@ -2,28 +2,14 @@
 // Text Case Maker II
 // Creat an advanced case maker function that can convert strings into all different kinds of case styles; like camel, pascal, snake, or even kebab.
 
-const makeCase = function(input, stringCase) {
-  if (stringCase === "camel") {
-    return camelCase(input);
-  }
-  if (stringCase === "pascal") {
-    return pascalCase(input);
-  }
-  if (stringCase === "snake") {
-    return snakeCase(input);
-  }
-  if (stringCase === "kebab") {
-    return kebabCase(input);
-  }
-  if (stringCase === "title") {
-    return titleCase(input);
-  }
-  if (stringCase === "vowel") {
-    return vowelCase(input);
-  }
-  if (stringCase === "consonant") {
-    return consonantCase(input);
-  }
+const makeCase = (input, stringCase) => {
+  if (stringCase === "camel") return camelCase(input);
+  if (stringCase === "pascal") return pascalCase(input);
+  if (stringCase === "snake") return snakeCase(input);
+  if (stringCase === "kebab") return kebabCase(input);
+  if (stringCase === "title") return titleCase(input);
+  if (stringCase === "vowel") return vowelCase(input);
+  if (stringCase === "consonant") return consonantCase(input);
 };
 
 console.log(makeCase("this is a string", "camel"));
@@ -34,7 +20,7 @@ console.log(makeCase("this is a string", "title"));
 console.log(makeCase("this is a string", "vowel"));
 console.log(makeCase("this is a string", "consonant"));
 
-
+// function declarations will be hoisted
 function camelCase(input) {
   let arrayOfStrings = input.split(" ");
   let arrayOfArrays = [];

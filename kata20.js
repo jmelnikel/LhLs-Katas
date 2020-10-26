@@ -2,7 +2,7 @@
 // Taxi Cab Geometry
 // Write a function to help taxicabs determine how far away a destination is based on the directions given.
 
-const blocksAway = function(directions) {
+const blocksAway = directions => {
   const rollNumber = (directions.length / 2);
   const arrayOfArrays = [];
   for (let i = 1; i <= rollNumber; i++) {
@@ -44,7 +44,7 @@ console.log(blocksAway(["right", 2, "left", 3, "left", 1]));
 console.log(blocksAway(["left", 1, "right", 1, "left", 1, "right", 1, "left", 1, "right", 1]));
 console.log(blocksAway(["left", 3, "right", 1, "right", 3, "right", 1]));
 
-
+// function declarations will be hoisted
 function determineDirection(initialDirection, turn) {
   let finalDirection = "";
   if (initialDirection === "north" && turn === "right") {

@@ -15,7 +15,6 @@ const totalBottles = tally => {
   if (!tally.newBottles || (tally.empties >= 2 || tally.caps >= 4)) {
     return tally
   } else {
-
     drinkBottles(tally);
 
     if (tally.empties >= 2) convertEmpties(tally);

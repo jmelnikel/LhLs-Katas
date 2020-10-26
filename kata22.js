@@ -3,7 +3,7 @@
 
 let args = process.argv.slice(2);
 
-const reverseString = function(string) {
+const reverseString = string => {
   let output = "";
   for (let i = string.length - 1; i >= 0; i--) {
     output += string[i];

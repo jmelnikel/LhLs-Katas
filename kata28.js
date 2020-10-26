@@ -1,11 +1,8 @@
-/* eslint-disable func-style */
 // Sum From a to b Recursively
 // This frunction takes 2 numbers and returns the sum of all the munbers in between incusively. The function performs the task recurively. It is assumed that fromN is less than or equal to toN.
 
-function sum(fromN, toN) {
-  if (fromN === toN) {
-    return fromN;
-  }
+const sum = (fromN, toN) => {
+  if (fromN === toN) return fromN;
   return fromN + sum(fromN + 1, toN);
 }
 

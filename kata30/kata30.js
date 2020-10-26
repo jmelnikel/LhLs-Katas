@@ -8,7 +8,9 @@ const check = number => {
   for (let i = 1; i < numberArrayReversed.length; i += 2) {
     let current = numberArrayReversed[i];
     current *= 2;
-    if (current > 9) current = toNumberArray(current).reduce(reducer);
+    if (current > 9) {
+      current = toNumberArray(current).reduce(reducer);
+    }
     numberArrayReversed[i] = current;
   }
   let validNumber = numberArrayReversed.reduce(reducer);

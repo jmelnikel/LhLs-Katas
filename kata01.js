@@ -1,10 +1,9 @@
 // Sum the Largest Numbers
 // Find the two largest numbers in the array, and sum them together.
 
-
-const sumLargestNumbers = function(data) {
+const sumLargestNumbers = data => {
   data.sort((a, b) => b - a);
-  return data[0] + data [1];
+  return data[0] + data[1];
 };
 
 console.log(sumLargestNumbers([1, 10]));

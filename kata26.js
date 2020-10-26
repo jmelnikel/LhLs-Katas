@@ -1,6 +1,7 @@
 /* eslint-disable func-style */
 // Sales Tax
 // This function calculates the total sales and total tax, grouped by company.
+
 const salesTaxRates = {
   AB: 0.05,
   BC: 0.12,
@@ -25,8 +26,7 @@ const companySalesData = [
   }
 ];
 
-
-const calculateSalesTax = function(salesData, taxRates) {
+const calculateSalesTax = (salesData, taxRates) => {
   let output = createObjectOfCompanyNames(salesData);
   for (let sales of salesData) {
     let totalSales = calculateTotalSales(sales.sales);
@@ -38,8 +38,7 @@ const calculateSalesTax = function(salesData, taxRates) {
 };
 console.log(calculateSalesTax(companySalesData, salesTaxRates));
 
-
-// Helper Function Declarations - These will be hoisted.
+// function declarations will be hoisted.
 // eslint-disable-next-line func-style
 function createObjectOfCompanyNames(salesData) {
   const output = {};
@@ -52,7 +51,6 @@ function createObjectOfCompanyNames(salesData) {
   return output;
 }
 
-
 function calculateTotalSales(salesArray) {
   let output = 0;
   for (let sale of salesArray) {
@@ -60,7 +58,6 @@ function calculateTotalSales(salesArray) {
   }
   return output;
 }
-
 
 function calculateTotalTaxes(salesTotal, taxRates, province) {
   let taxRate = taxRates[province];

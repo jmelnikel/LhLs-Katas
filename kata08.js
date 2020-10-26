@@ -1,7 +1,7 @@
 // Repeating Numbers
 // The input data for this exercise will be two dimensional array (an array of arrays), where each sub-array will have two numeric values. The first will be the value to repeat, the second will be the amount of times to repeat that value.
 
-const repeatNumbers = function(data) {
+const repeatNumbers = data => {
   let output = "";
   for (let item of data) {
     output += printNumbers(item);
@@ -9,7 +9,7 @@ const repeatNumbers = function(data) {
   return output;
 };
 
-const printNumbers = function(array) {
+const printNumbers = array => {
   let output = "";
   for (let i = 1; i <= array[1]; i++) {
     output += array[0].toString();
