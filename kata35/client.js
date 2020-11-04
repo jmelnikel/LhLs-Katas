@@ -1,6 +1,8 @@
 // File Server
 // Via command line arguments, the client can request from the server a certain file and the server will fetch it and send it back. The client will then save the file. This only works with txt files and does not implement a search function on the server. The requested file needs to be in the same diretory as the server.
 
+// CLI: node clientjs <pathToFile> <fileToWrite>
+
 const net = require('net');
 const fs = require('fs');
 const connection = net.createConnection({
