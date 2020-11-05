@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 // Poppin Bottles
 // Given the parameters below, write a program so that you can figure out how many total bottles of pop can be redeemed given a customer investment.
 // 1) For every two empty bottles, you can get one free (full) bottle of pop.
@@ -8,12 +9,12 @@ let tally = {
   empties: 0,
   caps: 0,
   totalBottles: 0
-}
+};
 
 const totalBottles = tally => {
   tally.totalBottles += tally.newBottles;
   if (!tally.newBottles || (tally.empties >= 2 || tally.caps >= 4)) {
-    return tally
+    return tally;
   } else {
     drinkBottles(tally);
 
@@ -22,7 +23,7 @@ const totalBottles = tally => {
 
     totalBottles(tally);
     return tally;
-  };
+  }
 };
 
 console.log(totalBottles(tally));

@@ -11,6 +11,6 @@ const sumItems = array => {
     }
   }
   return total;
-}
+};
 
 console.log(sumItems([[1, 2, [[3], 4]], 5, []]));

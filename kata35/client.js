@@ -20,8 +20,7 @@ connection.on('connect', () => {
 
 connection.on('data', (data) => {
   fs.writeFile(destination, data, error => {
-    if (error) throw error
+    if (error) throw error;
     console.log("The file was saved!");
   });
 });
-

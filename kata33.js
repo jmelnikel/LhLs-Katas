@@ -9,9 +9,9 @@ const titleCase = (string) => {
   let stringArray = string.toLowerCase().split(" ");
   let output = "";
   for (let word of stringArray) {
-    let wordArray = word.split("")
+    let wordArray = word.split("");
     wordArray[0] = wordArray[0].toUpperCase();
-    word = wordArray.join("")
+    word = wordArray.join("");
     output += word + " ";
   }
   return output;
