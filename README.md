@@ -38,3 +38,4 @@ These are javascript exercises to work with functions, conditionals, loops, obje
 33. Kata 33 - Title Case
 34. Kata 34 - Shift Cipher with unit testing (Mocha/Chai).
 35. Kata 35 - File Server - using server/client TCP and fs.
+36. Kata 36 - Find Friend
