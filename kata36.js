@@ -35,6 +35,7 @@ const contacts = [
   }
 ];
 
+
 const findFriend = (data, contact, field) => {
   const output = {};
 

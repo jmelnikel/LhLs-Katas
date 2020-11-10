@@ -4,7 +4,7 @@
 const instructorWithLongestName = instructors => {
   let nameLength = 0;
   let returnValue;
-  for (let item of instructors) {
+  for (const item of instructors) {
     if (item["name"].length > nameLength) {
       nameLength = item["name"].length;
       returnValue = item;

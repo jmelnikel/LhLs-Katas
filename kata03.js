@@ -3,10 +3,10 @@
 
 const numberOfVowels = data => {
   let number = 0;
-  let vowels = ["a", "e", "i", "o", "u"];
+  const vowels = ["a", "e", "i", "o", "u"];
 
-  for (let char of data) {
-    for (let letter of vowels) {
+  for (const char of data) {
+    for (const letter of vowels) {
       if (char === letter) {
         number += 1;
       }

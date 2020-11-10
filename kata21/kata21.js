@@ -3,16 +3,16 @@
 
 // Inputting the same number multiple times should only count as one try. If the user provides an answer which isn't a number, print an error message and do not count this as a try.
 
-let prompt = require("prompt-sync")();
+const prompt = require("prompt-sync")();
 
-let numberofGuesses = 0;
-let previousGuesses = [];
+const numberofGuesses = 0;
+const previousGuesses = [];
 
-let guessNumber = (randomNumber, numberofGuesses) => {
-  let stringAnswer = prompt("Guess a number between 1 and 100 or 'Exit' to exit: ");
+const guessNumber = (randomNumber, numberofGuesses) => {
+  const stringAnswer = prompt("Guess a number between 1 and 100 or 'Exit' to exit: ");
   if (stringAnswer === "Exit") return console.log("Goodbye");
 
-  let answer = parseInt(stringAnswer);
+  const answer = parseInt(stringAnswer);
   if (!Number.isInteger(answer)) {
     console.log(`Your guess of ${stringAnswer} is not a number.`);
   }

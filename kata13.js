@@ -4,7 +4,7 @@
 const talkingCalendar = date => {
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   date = date.split("/"); // [ '2017', '08', '02' ]
-  let month = months[Number.parseInt(date[1]) - 1];
+  const month = months[Number.parseInt(date[1]) - 1];
 
   let day = Number.parseInt(date[2]);
   if ([1, 21, 31].includes(day)) {
@@ -17,7 +17,7 @@ const talkingCalendar = date => {
     day = day.toString() + "th";
   }
 
-  let year = date[0];
+  const year = date[0];
 
   return `${month} ${day}, ${year}`;
 };

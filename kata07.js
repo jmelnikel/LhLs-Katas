@@ -3,7 +3,7 @@
 
 const checkAir = (samples, threshold) => {
   let numberOfDirty = 0;
-  for (let sample of samples) {
+  for (const sample of samples) {
     if (sample === "dirty") {
       numberOfDirty += 1;
     }

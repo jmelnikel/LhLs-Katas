@@ -4,7 +4,7 @@
 // 1) For every two empty bottles, you can get one free (full) bottle of pop.
 // 2) For every four bottle caps, you can get one free (full) bottle of pop.
 // 3) Each bottle of pop costs $2 to purchase.
-let tally = {
+const tally = {
   newBottles: process.argv.slice(2) / 2,
   empties: 0,
   caps: 0,
@@ -37,14 +37,14 @@ function drinkBottles(tally) {
 }
 
 function convertEmpties(tally) {
-  let emptiesToConvert = Math.floor(tally.empties / 2);
+  const emptiesToConvert = Math.floor(tally.empties / 2);
   tally.empties -= emptiesToConvert * 2;
   tally.newBottles += emptiesToConvert;
   return tally;
 }
 
 function convertCaps(tally) {
-  let capsToConvert = Math.floor(tally.caps / 4);
+  const capsToConvert = Math.floor(tally.caps / 4);
   tally.caps -= capsToConvert * 4;
   tally.newBottles += capsToConvert;
   return tally;

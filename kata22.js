@@ -1,7 +1,7 @@
 // Reversing a String
 // Write a function that takes any number of command line arguments, all strings, and reverses them before outputting them one at a time to the console.
 
-let args = process.argv.slice(2);
+const args = process.argv.slice(2);
 
 const reverseString = string => {
   let output = "";
@@ -11,6 +11,6 @@ const reverseString = string => {
   return output;
 };
 
-for (let item of args) {
+for (const item of args) {
   console.log(reverseString(item));
 }

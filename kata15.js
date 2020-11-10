@@ -2,8 +2,8 @@
 // Given a list of instructors, create a single object to organize them based on their course.
 
 const organizeInstructors = instructors => {
-  let output = {};
-  for (let instructor of instructors) {
+  const output = {};
+  for (const instructor of instructors) {
     if (!output[instructor["course"]]) {
       output[instructor["course"]] = [instructor["name"]];
     } else {

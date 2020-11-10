@@ -39,8 +39,8 @@ const data = {
 const biggestFollower = data => {
   let longestLength = 0;
   let output = [];
-  for (let personID in data) {
-    let arrayOfFollows = data[personID].follows;
+  for (const personID in data) {
+    const arrayOfFollows = data[personID].follows;
     if (arrayOfFollows.length === longestLength) {
       output.push(data[personID].name);
     } else if (arrayOfFollows.length > longestLength) {
@@ -59,7 +59,7 @@ const mostPopular = data => {
   const followsTally = createFollowsTally(arrayOfFollows);
   let mostFollowers = 0;
   let output = [];
-  for (let personID in followsTally) {
+  for (const personID in followsTally) {
     if (followsTally[personID] === mostFollowers) {
       output.push(personID);
     } else if (followsTally[personID] > mostFollowers) {
@@ -75,22 +75,22 @@ console.log(mostPopular(data));
 // function declarations will be hoisted
 function createArrayOfFollows(data) {
   let arrayOfFollows = [];
-  for (let personID in data) {
+  for (const personID in data) {
     arrayOfFollows = arrayOfFollows.concat(data[personID].follows);
   }
   return arrayOfFollows;
 }
 
 function createFollowsTally(arrayOfFollows) {
-  let followsTally = {};
-  for (let follow of arrayOfFollows) {
+  const followsTally = {};
+  for (const follow of arrayOfFollows) {
     if (!followsTally[follow]) {
       followsTally[follow] = 1;
     } else {
       followsTally[follow] += 1;
     }
   }
-  for (let item in followsTally) {
+  for (const item in followsTally) {
     followsTally[data[item].name] = followsTally[item];
     delete followsTally[item];
   }
@@ -101,17 +101,17 @@ function createFollowsTally(arrayOfFollows) {
 // 3. This function returns a list of all the individuals with the names of thier followers and whom they follow.
 const printAll = data => {
   const listOfNamesObject = createListOfNames(data);
-  for (let personID in data) {
-    let name = data[personID].name;
-    let followsList = createFollowsList(data, personID);
+  for (const personID in data) {
+    const name = data[personID].name;
+    const followsList = createFollowsList(data, personID);
     listOfNamesObject[name].follows = followsList;
   }
 
-  for (let personID in data) {
-    let followersArray = data[personID].follows;
-    for (let follower of followersArray) {
-      let followerName = data[follower].name;
-      let followeeName = data[personID].name;
+  for (const personID in data) {
+    const followersArray = data[personID].follows;
+    for (const follower of followersArray) {
+      const followerName = data[follower].name;
+      const followeeName = data[personID].name;
       listOfNamesObject[followerName].followers.push(followeeName);
     }
   }
@@ -121,9 +121,9 @@ console.log(printAll(data));
 
 // function declarations will be hoisted
 function createListOfNames(data) {
-  let output = {};
-  for (let personID in data) {
-    let name = data[personID].name;
+  const output = {};
+  for (const personID in data) {
+    const name = data[personID].name;
     output[name] = {
       followers: [],
       follows: []
@@ -133,9 +133,9 @@ function createListOfNames(data) {
 }
 
 function createFollowsList(data, personID) {
-  let output = [];
-  let followsIDArray = data[personID].follows;
-  for (let followsID of followsIDArray) {
+  const output = [];
+  const followsIDArray = data[personID].follows;
+  for (const followsID of followsIDArray) {
     output.push(data[followsID].name);
   }
   return output;
@@ -144,9 +144,9 @@ function createFollowsList(data, personID) {
 // 4. This function returns a list of names of individuals who follow someone that doesn't follow them back.
 const unrequitedFollowers = data => {
   const output = [];
-  for (let personID in data) {
-    let followsArray = data[personID].follows;
-    for (let follow of followsArray) {
+  for (const personID in data) {
+    const followsArray = data[personID].follows;
+    for (const follow of followsArray) {
       if (!data[follow].follows.includes(personID)) {
         if (!output.includes(data[personID].name)) {
           output.push(data[personID].name);

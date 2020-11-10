@@ -8,7 +8,7 @@ const stringArray = string.split(" ");
 const printInFrame = stringArray => {
   const frameWidth = determineFrameWidth(stringArray);
   console.log(createTopBottomBorder(frameWidth));
-  for (let stringItem of stringArray) {
+  for (const stringItem of stringArray) {
     console.log(createWordLine(stringItem, frameWidth));
   }
   console.log(createTopBottomBorder(frameWidth));
@@ -19,7 +19,7 @@ printInFrame(stringArray);
 // function declarations will be hoisted
 function determineFrameWidth(stringArray) {
   let output = 0;
-  for (let item of stringArray) {
+  for (const item of stringArray) {
     if (item.length > output) {
       output = item.length;
     }
@@ -38,7 +38,7 @@ function createTopBottomBorder(frameWidth) {
 function createWordLine(stringItem, frameWidth) {
   let output = "";
   output = `* ${stringItem}`;
-  let numberOfSpaces = frameWidth - stringItem.length - 3;
+  const numberOfSpaces = frameWidth - stringItem.length - 3;
   for (let i = 1; i <= numberOfSpaces; i++) {
     output += " ";
   }

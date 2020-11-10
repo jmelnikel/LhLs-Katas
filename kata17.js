@@ -8,12 +8,12 @@
 
 const urlDecode = text => {
   text = text.split("&");
-  let textArray = [];
+  const textArray = [];
   for (let item of text) {
     item = item.split("%20").join(" ");
     textArray.push(item);
   }
-  let textObject = {};
+  const textObject = {};
   for (let item of textArray) {
     item = item.split("=");
     textObject[item[0]] = item[1];

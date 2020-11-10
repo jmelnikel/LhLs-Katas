@@ -4,11 +4,11 @@
 const conditionalSum = (values, condition) => {
   let sum;
   if (condition === "even") {
-    let filtered = values.filter(num => num % 2 === 0);
+    const filtered = values.filter(num => num % 2 === 0);
     if (filtered.length === 0) return 0;
     sum = filtered.reduce((num, sum) => num + sum);
   } else {
-    let filtered = values.filter(num => num % 2 !== 0);
+    const filtered = values.filter(num => num % 2 !== 0);
     if (filtered.length === 0) return 0;
     sum = filtered.reduce((num, sum) => num + sum);
   }

@@ -3,7 +3,7 @@
 
 const repeatNumbers = data => {
   let output = "";
-  for (let item of data) {
+  for (const item of data) {
     output += printNumbers(item);
   }
   return output;

@@ -10,7 +10,7 @@ const chooseRecipe = (bakeryA, bakeryB, recipes) => {
 };
 
 const matchRecipeAndBakery = (bakery, recipe) => {
-  for (let ingredient of bakery) {
+  for (const ingredient of bakery) {
     if (recipe["ingredients"].includes(ingredient)) return true;
   }
 };

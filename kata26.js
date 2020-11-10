@@ -27,11 +27,11 @@ const companySalesData = [
 ];
 
 const calculateSalesTax = (salesData, taxRates) => {
-  let output = createObjectOfCompanyNames(salesData);
-  for (let sales of salesData) {
-    let totalSales = calculateTotalSales(sales.sales);
+  const output = createObjectOfCompanyNames(salesData);
+  for (const sales of salesData) {
+    const totalSales = calculateTotalSales(sales.sales);
     output[sales.name].totalSales += totalSales;
-    let totalTaxes = calculateTotalTaxes(totalSales, taxRates, sales.province);
+    const totalTaxes = calculateTotalTaxes(totalSales, taxRates, sales.province);
     output[sales.name].totalTaxes += totalTaxes;
   }
   return output;
@@ -42,7 +42,7 @@ console.log(calculateSalesTax(companySalesData, salesTaxRates));
 // eslint-disable-next-line func-style
 function createObjectOfCompanyNames(salesData) {
   const output = {};
-  for (let data of salesData) {
+  for (const data of salesData) {
     output[data.name] = {
       totalSales: 0,
       totalTaxes: 0
@@ -53,13 +53,13 @@ function createObjectOfCompanyNames(salesData) {
 
 function calculateTotalSales(salesArray) {
   let output = 0;
-  for (let sale of salesArray) {
+  for (const sale of salesArray) {
     output += sale;
   }
   return output;
 }
 
 function calculateTotalTaxes(salesTotal, taxRates, province) {
-  let taxRate = taxRates[province];
+  const taxRate = taxRates[province];
   return salesTotal * taxRate;
 }

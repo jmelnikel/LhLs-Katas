@@ -1,5 +1,5 @@
 // Multiplication Table
-// Given a number as the input data, create a function that takes this number is the highest value of our multiplication table. Our job is to generate a multiplication table for the values from 1 to the provided number.
+// Given a number as the input data, this function creates a multiplication table with that value as the highest number.
 
 const multiplicationTable = maxValue => {
   let output = "";

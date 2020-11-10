@@ -2,12 +2,12 @@
 // Creating a function that when given a string it returns Square Code. In Square Code, the spaces are removed from the english text and the characters are written into a rectangle. The message is then re-coded by reading down the columns going left to right.
 
 const squareCode = message => {
-  let array = message.split(" ").join("").split("");
-  let num = Math.ceil(Math.sqrt(array.length));
+  const array = message.split(" ").join("").split("");
+  const num = Math.ceil(Math.sqrt(array.length));
   let tempArray;
-  let finalArray = [];
+  const finalArray = [];
 
-  let createArray = function(array) {
+  const createArray = function(array) {
     if (array.length === 0) {
       return;
     } else if (array.length < num) {
@@ -26,7 +26,7 @@ const squareCode = message => {
   createArray(array);
 
   let line = "";
-  let createLine = function(finalArray) {
+  const createLine = function(finalArray) {
     if (finalArray[0].length === 0) {
       return;
     } else {

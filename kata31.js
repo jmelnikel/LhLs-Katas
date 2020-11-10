@@ -6,9 +6,9 @@ const data = [45, 24, 35, 31, 40, 38, 11];
 
 const maxProfit = (data) => {
   let maxProfit = 0;
-  for (let index in data) {
-    let array = data.slice(index);
-    let profit = compareSubsequentNumbers(array);
+  for (const index in data) {
+    const array = data.slice(index);
+    const profit = compareSubsequentNumbers(array);
     if (profit > maxProfit) {
       maxProfit = profit;
     }
@@ -23,7 +23,7 @@ console.log(maxProfit(data));
 function compareSubsequentNumbers(array) {
   let greatestDifference = 0;
   for (let i = 1; i < array.length; i++) {
-    let compare = array[i] - array[0];
+    const compare = array[i] - array[0];
     if (compare > greatestDifference) {
       greatestDifference = compare;
     }

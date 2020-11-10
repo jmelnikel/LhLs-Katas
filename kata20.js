@@ -12,7 +12,7 @@ const blocksAway = directions => {
     arrayOfArrays.push(tempArray);
   }
 
-  const distance = { "east": 0, "north": 0 };
+  const distance = { east: 0, north: 0 };
   let currentDirection = "";
   if (arrayOfArrays[0][0] === "right") {
     currentDirection = "east";

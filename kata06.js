@@ -12,8 +12,8 @@ const whereCanIPark = (spots, vehicle) => {
 };
 
 const findSpot = function(array, criteria) {
-  for (let lineIndex in array) {
-    for (let spotIndex in array[lineIndex]) {
+  for (const lineIndex in array) {
+    for (const spotIndex in array[lineIndex]) {
       if (criteria.includes(array[lineIndex][spotIndex])) {
         return [spotIndex, lineIndex];
       }
